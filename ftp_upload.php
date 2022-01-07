@@ -12,12 +12,11 @@ $ftp_userpass="altin1";
 
 // File name or path to upload to ftp server
 $file = $_FILES['srcfile']['name'];
+$path_file = $_FILES['srcfile']['tmp_name'];
 $fileExt = explode('.', $file);
 $fileActualExt = strtolower(end($fileExt));
 $allowed = array('doc', 'docx','xls','xlsx');
-$path_file = "C:\Users\GJKK\Desktop\siguria3\altini\\";
 if(in_array($fileActualExt, $allowed)){
-
 // Establishing ftp connection
 $ftp_connection = ftp_connect($ftp_server)
 	or die("Could not connect to $ftp_server");
@@ -33,8 +32,7 @@ if( $ftp_connection ) {
 	if($login) {
 		echo "<br>logged in successfully!";
 		
-		if (ftp_put($ftp_connection,
-				"uploadedfile_name_".$file, $path_file.$file, FTP_BINARY))
+		if (ftp_put($ftp_connection,$file, $path_file, FTP_BINARY))
 		{
 		echo "<br>Uploaded successful $file.";
 		}
