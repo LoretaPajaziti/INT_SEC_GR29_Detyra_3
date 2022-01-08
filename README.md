@@ -6,6 +6,8 @@ Hapat kryesorë:
 
 ## Teknologjitë
 
+* PHP
+* Hack
 * HTML
 * CSS
 * FileZilla
