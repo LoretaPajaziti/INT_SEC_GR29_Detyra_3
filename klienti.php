@@ -72,8 +72,9 @@ input.btn.btn-warning {
 <div class="container">
     <div class="col-xs-8 col-xs-offset-2 well" style="background:none;">
     <form action="ftp_upload.php" method="post" enctype="multipart/form-data">
-        <legend>Please Choose File to Upload</legend>
-        <div class="form-group">
+        <h1>Welcome to our File Uploader &#x1F603</h1>
+        <legend>Please upload file documents only in 'doc', 'docx', 'xls', 'xlsx' format.</legend><br /><br />
+        <div class="form-group" id="element">
             <input type="file" name="srcfile" />
         </div>
         <div class="form-group">
