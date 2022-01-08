@@ -3,18 +3,19 @@
 // Connect to FTP server
 $ftp_server = "127.0.0.1";
 
-// Use correct ftp username
-$ftp_username="altini";
+// Use ftp username
+$ftp_username="spiderman";
 
-// Use correct ftp password corresponding
-// to the ftp username
-$ftp_userpass="altin1";
+// Use ftp password corresponding to the ftp username
+$ftp_userpass="spiderman123";
 
 // File name or path to upload to ftp server
 $file = $_FILES['srcfile']['name'];
 $path_file = $_FILES['srcfile']['tmp_name'];
 $fileExt = explode('.', $file);
 $fileActualExt = strtolower(end($fileExt));
+
+// Specifying which type of files are compatible 
 $allowed = array('doc', 'docx','xls','xlsx');
 if(in_array($fileActualExt, $allowed)){
 // Establishing ftp connection
@@ -30,7 +31,7 @@ if( $ftp_connection ) {
 	
 	// Checking whether logged in successfully or not
 	if($login) {
-		echo "<br>logged in successfully!";
+		echo "<br>Logged in successfully!";
 		
 		if (ftp_put($ftp_connection,$file, $path_file, FTP_BINARY))
 		{
@@ -42,7 +43,7 @@ if( $ftp_connection ) {
 		
 	}
 	else {
-		echo "<br>login failed!";
+		echo "<br>Login failed!";
 	}
 
 	// Closing the connection
@@ -53,6 +54,8 @@ if( $ftp_connection ) {
 
 }
 else {
-    echo 'Lloji i file-it qe keni zgjedhur nuk pershtatet!';
+  	echo "The type of file you have chosen is not compatible with our system.";
+	echo "<br>";
+	echo "Please select only .docx or .xlsx files!";
    }
 ?>
