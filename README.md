@@ -18,4 +18,4 @@ Hapat kryesorë:
 
 * Klonimi i repository-t përmes komandës git clone https://github.com/LoretaPajaziti/INT_SEC_GR29_Detyra_3
 * Vendosja e fajllave në xampp/htdocs
-* Qasja bëhet përmes Apache web server
+* Qasja bëhet përmes Xampp Control Panel-it
