@@ -1,4 +1,4 @@
-# Ngarkimi i fajllave me ekstension .doc, .docx, .xls dhe .xlsx në një FTP server
+# Ngarkimi i fajllave me ekstension .doc, .docx, .xls dhe .xlsx në një FTP Server
 
 Hapat kryesorë:
 * Qëllimi i aplikacionit: Aplikacioni i ngarkon/upload-on fajllat me ekstensionet .doc, .docx, .xls dhe .xlsx në një FTP server.
